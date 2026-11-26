@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galeria de fotos da Estaleiro Pizzaria: pizzas, forno a lenha, ambiente e ingredientes.">
+    <title>Estaleiro Pizzaria | Galeria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="p4.css">
+</head>
+<body class="pagina">
+
+    <header class="header">
+        <div class="header__principal">
+            <div class="header__principal-container">
+                <a href="landing_page.html" class="header__logo">
+                    <div class="header__logo-textos">
+                        <span class="header__logo-titulo">ESTALEIRO PIZZARIA</span>
+                        <span class="header__logo-subtitulo">FORNO A LENHA &bull; DESDE 2014</span>
+                    </div>
+                </a>
+
+                <input type="checkbox" id="nav-toggle" class="nav__checkbox" aria-hidden="true">
+                <label for="nav-toggle" class="nav__hamburger" aria-label="Abrir menu">
+                    <span class="nav__hamburger-linha"></span>
+                    <span class="nav__hamburger-linha"></span>
+                    <span class="nav__hamburger-linha"></span>
+                </label>
+
+                <nav class="nav" aria-label="Navegação principal">
+                    <ul class="nav__lista">
+                        <li class="nav__item">
+                            <a href="landing_page.html" class="nav__link">Início</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="p1.html" class="nav__link">Cardápio</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="p2.html" class="nav__link">Sobre Nós</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="p4.html" class="nav__link nav__link--ativo" aria-current="page">Galeria</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="p3.html" class="nav__link">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero" aria-labelledby="hero-titulo">
+            <div class="hero__container">
+                <div class="hero__conteudo">
+                    <h1 id="hero-titulo" class="hero__titulo">Galeria do Estaleiro</h1>
+                    <p class="hero__descricao">Nossas pizzas, o forno a lenha, o salão e os ingredientes, em fotos.</p>
+                    <div class="hero__botoes">
+                        <a href="p1.html" class="botao botao--destaque">Explorar Cardápio</a>
+                        <a href="landing_page.html" class="botao botao--secundario">Voltar ao Início</a>
+                    </div>
+                    <div class="hero__estatisticas">
+                        <div class="hero__estatistica-item"><span class="hero__estatistica-numero">26</span><span class="hero__estatistica-legenda">Fotos na Galeria</span></div>
+                        <div class="hero__estatistica-divisor"></div>
+                        <div class="hero__estatistica-item"><span class="hero__estatistica-numero">450&deg;C</span><span class="hero__estatistica-legenda">Forno a Lenha</span></div>
+                        <div class="hero__estatistica-divisor"></div>
+                        <div class="hero__estatistica-item"><span class="hero__estatistica-numero">2014</span><span class="hero__estatistica-legenda">Desde</span></div>
+                    </div>
+                </div>
+                <div class="hero__midia">
+                    <div class="hero__imagem-moldura">
+                        <img class="hero__imagem" src="imagens/pizza-hero.jpg" alt="Pizza artesanal saindo dourada do forno a lenha com queijo derretido">
+                        <div class="hero__tag-flutuante">
+                            <div>
+                                <strong class="hero__tag-titulo">Assada na Hora</strong>
+                                <span class="hero__tag-texto">Lenha de eucalipto certificado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="galeria" aria-labelledby="galeria-titulo">
+            <div class="galeria__container">
+                <div class="galeria__cabecalho">
+                    <h2 id="galeria-titulo" class="secao-titulo">Momentos do Estaleiro</h2>
+                    <p class="galeria__descricao">Escolha uma categoria para filtrar as fotos.</p>
+                </div>
+
+                <input type="radio" name="filtro" id="filtro-todos" class="galeria__radio galeria__radio--todos" checked>
+                <input type="radio" name="filtro" id="filtro-cardapio" class="galeria__radio galeria__radio--cardapio">
+                <input type="radio" name="filtro" id="filtro-forno" class="galeria__radio galeria__radio--forno">
+                <input type="radio" name="filtro" id="filtro-estabelecimento" class="galeria__radio galeria__radio--estabelecimento">
+                <input type="radio" name="filtro" id="filtro-ingredientes" class="galeria__radio galeria__radio--ingredientes">
+
+                <div class="filtros-galeria">
+                    <label for="filtro-todos" class="filtros-galeria__opcao filtros-galeria__opcao--todos">Todos</label>
+                    <label for="filtro-cardapio" class="filtros-galeria__opcao filtros-galeria__opcao--cardapio">Cardápio</label>
+                    <label for="filtro-forno" class="filtros-galeria__opcao filtros-galeria__opcao--forno">Forno a Lenha</label>
+                    <label for="filtro-estabelecimento" class="filtros-galeria__opcao filtros-galeria__opcao--estabelecimento">Estabelecimento</label>
+                    <label for="filtro-ingredientes" class="filtros-galeria__opcao filtros-galeria__opcao--ingredientes">Ingredientes</label>
+                </div>
+
+                <div class="galeria__grid">
+                    <figure class="galeria__item galeria__item--cardapio galeria__item--destaque">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/galeria-pizza-margherita.jpg" alt="Pizza Margherita com manjericão fresco" loading="lazy">
+                            <span class="galeria__categoria">Cardápio</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Pizza Margherita Clássica</h3>
+                            <p class="galeria__descricao-item">Molho San Marzano, muçarela de búfala e manjericão fresco.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--forno">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/fornada-da-noite.jpg" alt="Pizzas assando em um forno a lenha" loading="lazy">
+                            <span class="galeria__categoria">Forno a Lenha</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Fornada da Noite</h3>
+                            <p class="galeria__descricao-item">Pizzas assando lado a lado no calor da lenha.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--estabelecimento">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/galeria-interior-salao.jpg" alt="Salão da pizzaria com mesas e iluminação quente" loading="lazy">
+                            <span class="galeria__categoria">Estabelecimento</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Salão Aconchegante</h3>
+                            <p class="galeria__descricao-item">Ambiente climatizado para reunir a família e os amigos.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--ingredientes">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/massa-na-bancada.jpg" alt="Mãos preparando massa ao lado de um rolo de madeira" loading="lazy">
+                            <span class="galeria__categoria">Ingredientes</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Massa na Bancada</h3>
+                            <p class="galeria__descricao-item">Cada disco começa com farinha, água, sal e tempo.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--cardapio">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/galeria-pizza-pepperoni.jpg" alt="Pizza de pepperoni com borda crocante" loading="lazy">
+                            <span class="galeria__categoria">Cardápio</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Pepperoni Especial</h3>
+                            <p class="galeria__descricao-item">Queijo derretido e borda tostada no forno a lenha.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--forno">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/queijo-borbulhando.jpg" alt="Pizza com queijo e molho de tomate dentro do forno a lenha" loading="lazy">
+                            <span class="galeria__categoria">Forno a Lenha</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Queijo Borbulhando</h3>
+                            <p class="galeria__descricao-item">O ponto certo chega em poucos segundos.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--cardapio">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/napolitana-da-casa.jpg" alt="Pizza redonda recém-assada" loading="lazy">
+                            <span class="galeria__categoria">Cardápio</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Napolitana da Casa</h3>
+                            <p class="galeria__descricao-item">Massa fina no centro e borda alta.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--ingredientes">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/ingredientes-pizza.jpg" alt="Ingredientes frescos para o preparo da pizza" loading="lazy">
+                            <span class="galeria__categoria">Ingredientes</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Ingredientes Selecionados</h3>
+                            <p class="galeria__descricao-item">Produtos frescos de produtores locais.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--estabelecimento">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/galeria-exterior-pizzaria.jpg" alt="Fachada da pizzaria com a entrada iluminada" loading="lazy">
+                            <span class="galeria__categoria">Estabelecimento</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Nossa Fachada</h3>
+                            <p class="galeria__descricao-item">Na Av. Boa Viagem, de portas abertas para você.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--cardapio">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/pepperoni-com-presunto.jpg" alt="Pizza fatiada de pepperoni e presunto em mesa escura" loading="lazy">
+                            <span class="galeria__categoria">Cardápio</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Pepperoni com Presunto</h3>
+                            <p class="galeria__descricao-item">Fatias generosas sobre molho de tomate.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--forno">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/direto-do-forno.jpg" alt="Mão segurando uma pizza quente recém-saída do forno" loading="lazy">
+                            <span class="galeria__categoria">Forno a Lenha</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Direto do Forno</h3>
+                            <p class="galeria__descricao-item">Ainda soltando vapor a caminho da mesa.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--ingredientes">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/sova-manual.jpg" alt="Mãos sovando massa ao lado de uma tigela branca" loading="lazy">
+                            <span class="galeria__categoria">Ingredientes</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Sova Manual</h3>
+                            <p class="galeria__descricao-item">A massa é trabalhada à mão, sem pressa.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--cardapio">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/linguica-com-cogumelos.jpg" alt="Pizza de linguiça, cogumelos e azeitonas" loading="lazy">
+                            <span class="galeria__categoria">Cardápio</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Linguiça com Cogumelos</h3>
+                            <p class="galeria__descricao-item">Cogumelos, azeitonas e linguiça em uma só pizza.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--estabelecimento">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/area-do-bar.jpg" alt="Interior de um bar com mesas durante o dia" loading="lazy">
+                            <span class="galeria__categoria">Estabelecimento</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Área do Bar</h3>
+                            <p class="galeria__descricao-item">Um canto para esperar a mesa com calma.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--forno">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/forno-pizza.jpg" alt="Forno a lenha rústico com brasas acesas" loading="lazy">
+                            <span class="galeria__categoria">Forno a Lenha</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Forno a 450&deg;C</h3>
+                            <p class="galeria__descricao-item">Calor intenso para uma borda crocante e macia por dentro.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--cardapio">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/queijo-no-ponto.jpg" alt="Fatia de pizza com queijo derretido sendo levantada" loading="lazy">
+                            <span class="galeria__categoria">Cardápio</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Queijo no Ponto</h3>
+                            <p class="galeria__descricao-item">A primeira fatia sempre puxa um fio.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--ingredientes">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/molho-em-espiral.jpg" alt="Molho de tomate sendo espalhado em espiral sobre a massa" loading="lazy">
+                            <span class="galeria__categoria">Ingredientes</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Molho em Espiral</h3>
+                            <p class="galeria__descricao-item">O molho é espalhado do centro para a borda.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--estabelecimento">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/mesas-prontas.jpg" alt="Restaurante com várias mesas e cadeiras" loading="lazy">
+                            <span class="galeria__categoria">Estabelecimento</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Mesas Prontas</h3>
+                            <p class="galeria__descricao-item">Salão arrumado antes de abrir.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--forno">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/pizzaiolo-em-acao.jpg" alt="Chef preparando comida perto de um grande forno de pizza" loading="lazy">
+                            <span class="galeria__categoria">Forno a Lenha</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Pizzaiolo em Ação</h3>
+                            <p class="galeria__descricao-item">O preparo acontece ao lado do forno.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--cardapio">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/para-dividir.jpg" alt="Duas pizzas, uma delas com tomate e manjericão" loading="lazy">
+                            <span class="galeria__categoria">Cardápio</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Para Dividir</h3>
+                            <p class="galeria__descricao-item">Duas pizzas, uma mesa e boa conversa.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--ingredientes">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/tomate-e-salsa.jpg" alt="Tomates e purê de tomate com salsa em tigelas" loading="lazy">
+                            <span class="galeria__categoria">Ingredientes</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Tomate e Salsa</h3>
+                            <p class="galeria__descricao-item">A base de um bom molho.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--estabelecimento">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/jantar-em-familia.jpg" alt="Interior de restaurante com mesas e cadeiras" loading="lazy">
+                            <span class="galeria__categoria">Estabelecimento</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Jantar em Família</h3>
+                            <p class="galeria__descricao-item">Espaço para grupos pequenos e grandes.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--cardapio">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/fatia-na-mao.jpg" alt="Mão segurando uma fatia de pizza de pepperoni com muçarela" loading="lazy">
+                            <span class="galeria__categoria">Cardápio</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Fatia na Mão</h3>
+                            <p class="galeria__descricao-item">Pepperoni com muçarela fresca.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--forno">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/pa-e-fogo.jpg" alt="Chef com pá de pizza diante do forno" loading="lazy">
+                            <span class="galeria__categoria">Forno a Lenha</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Pá e Fogo</h3>
+                            <p class="galeria__descricao-item">A pá gira a pizza para assar por igual.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--ingredientes">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/molho-no-fogo.jpg" alt="Molho de tomate sendo mexido com colher de madeira" loading="lazy">
+                            <span class="galeria__categoria">Ingredientes</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Molho no Fogo</h3>
+                            <p class="galeria__descricao-item">Mexido com colher de pau.</p>
+                        </figcaption>
+                    </figure>
+                    <figure class="galeria__item galeria__item--estabelecimento">
+                        <div class="galeria__imagem-wrapper">
+                            <img class="galeria__imagem" src="imagens/balcao-de-atendimento.jpg" alt="Garçom em um balcão de madeira com quadros na parede" loading="lazy">
+                            <span class="galeria__categoria">Estabelecimento</span>
+                        </div>
+                        <figcaption class="galeria__conteudo">
+                            <h3 class="galeria__titulo-item">Balcão de Atendimento</h3>
+                            <p class="galeria__descricao-item">Madeira, quadros e gente para receber você.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__grid">
+                <div class="footer__coluna">
+                    <div class="footer__marca"><span class="footer__marca-nome">ESTALEIRO PIZZARIA</span></div>
+                    <p class="footer__descricao">A tradicional pizza napolitana feita no forno a lenha com ingredientes autênticos e fermentação natural.</p>
+                </div>
+                <div class="footer__coluna">
+                    <h3 class="footer__titulo">Navegação</h3>
+                    <ul class="footer__links">
+                        <li class="footer__item"><a href="landing_page.html" class="footer__link">Início</a></li>
+                        <li class="footer__item"><a href="p1.html" class="footer__link">Cardápio Completo</a></li>
+                        <li class="footer__item"><a href="p2.html" class="footer__link">Nossa História &amp; Forno</a></li>
+                        <li class="footer__item"><a href="p4.html" class="footer__link">Galeria de Fotos</a></li>
+                        <li class="footer__item"><a href="p5.html" class="footer__link">Reservas de Mesas</a></li>
+                        <li class="footer__item"><a href="p3.html" class="footer__link">Contato &amp; Localização</a></li>
+                    </ul>
+                </div>
+                <div class="footer__coluna">
+                    <h3 class="footer__titulo">Atendimento</h3>
+                    <ul class="footer__contatos">
+                        <li class="footer__contato-item">Av. Boa Viagem, 1500 - Recife, PE</li>
+                        <li class="footer__contato-item">(81) 3456-7890</li>
+                        <li class="footer__contato-item">WhatsApp: (81) 98765-4321</li>
+                        <li class="footer__contato-item">contato@estaleiropizzaria.com.br</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__inferior">
+                <p class="footer__copyright">&copy; 2026 Estaleiro Pizzaria &bull; Projeto Acadêmico de Web Coding &bull; Fotos ilustrativas (Unsplash e acervo do projeto).</p>
+                <div class="footer__termos">
+                    <a href="p3.html" class="footer__termos-link">Política de Privacidade</a>
+                    <span class="footer__divisor">&bull;</span>
+                    <a href="p3.html" class="footer__termos-link">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
